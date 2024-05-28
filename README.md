@@ -4,7 +4,7 @@ Uses the mod list in [`mods.json` of the `source`](https://github.com/ow-mods/ow
 
 The database is deployed to GitHub Pages, since GitHub aggressively caches direct access to the raw file in the repo. So if you want to read from the database, you should use this URL: https://ow-mods.github.io/ow-mod-db/database.json
 
-## [Click here to add your mod to the database](https://github.com/ow-mods/ow-mod-db/issues/new?labels=add-mod&template=add-mod.yml&title=%5BYour+mod+name+here%5D)
+## [Click here to add your mod to the database](https://github.com/NanoDogs-Studios/firewatch-mod-db/issues/new?labels=add-mod&template=add-mod.yml&title=%5BYour+mod+name+here%5D)
 
 Or, if you want, you can [edit the mod list yourself and open a PR](https://github.com/ow-mods/outer-wilds-mod-db/edit/source/mods.json)
 
