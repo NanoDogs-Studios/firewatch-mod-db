@@ -1,10 +1,81 @@
----
-name: Add Mod
-about: Add a mod to the Firewatch MDB (Mod Database)
-title: Mod name here
-labels: enhancement
-assignees: ''
-
----
-
-
+name: Add new mod / edit existing mod
+description: Request for a new mod to be added to the database, or edit an existing mod.
+title: "[Your mod name here]"
+labels: ["add-mod"]
+body:
+  - type: input
+    id: discordId
+    attributes:
+      label: Your Discord Name
+      description: "ID you use in the [Outer Wilds Modding Discord](https://discord.gg/9vE5aHxcF9). This is just so we know who you are and give you your modder role (purple!)."
+      placeholder: Raicuparta#0015
+  - type: input
+    id: uniqueName
+    attributes:
+      label: Mod uniqueName
+      description: "Your mod's ID, unchangeable and unique within the whole database. IMPORTANT: must match uniqueName from your mod's `manifest.json`. If you're editing an existing mod, this must match the `uniqueName` of that mod. This property can't be edited."
+      placeholder: Raicuparta.ModTemplate
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Mod name
+      description: Human-readable title for your mod. If you want to change your mod's name later, you'll need to request a change to the database again.
+      placeholder: Outer Wilds Mod Template
+    validations:
+      required: true
+  - type: input
+    id: repoUrl
+    attributes:
+      label: GitHub repository URL
+      description: GitHub repository that contains the mod's source code and releases.
+      placeholder: https://github.com/Raicuparta/ow-mod-template
+    validations:
+      required: true
+  - type: dropdown
+    id: tags
+    validations:
+      required: true
+    attributes:
+      label: Tags
+      description: Tags describe your mod and make it easier for users to find it. You can select multiple.
+      multiple: true
+      options:
+        # These options have to match the ones defined in mods.schema.json
+        - jam
+        - library
+        - gameplay
+        - tweaks
+        - integration
+        - tool
+        - content
+        - story
+        - audiovisual
+        - localization
+  - type: input
+    id: authorDisplay
+    attributes:
+      label: Author display name
+      description: Custom name to show in the author field for this mod. Useful if your mod is in an organization, or made by multiple people. Leave blank to use the repository owner name.
+      placeholder: Raicuparta & Paicurarta
+  - type: input
+    id: parent
+    attributes:
+      label: Parent uniqueName
+      description: If this mod is an addon for another mod, place the parent's uniqueName here. For instance, custom planets made with New Horizons would have `xen.NewHorizons` in this field.
+      placeholder: Raicuparta.ModTemplateParent
+  - type: dropdown
+    id: dlc
+    attributes:
+      label: DLC Required
+      description: Select "DLC Required" if this mod requires the Echoes of the Eye DLC to work.
+      options:
+        - "DLC Required"
+  - type: dropdown
+    id: alpha
+    attributes:
+      label: Alpha Mod
+      description: Select "Is alpha mod" if this mod is made for Outer Wilds Alpha.
+      options:
+        - "Is alpha mod"
