@@ -1,4 +1,5 @@
 # Firewatch Mod Database
+## Important: This Mod Database is a fork of the Outer Wilds Mod Database! all credits go to the creators of that database!
 
 Uses the mod list in [`mods.json` of the `source`](https://github.com/ow-mods/ow-mod-db/blob/source/mods.json) branch, fetches the required data for each mod. That data is then added to [`database.json` in the `master` branch](https://ow-mods.github.io/ow-mod-db/database.json). The process happens automatically every once in a while.
 
